@@ -3,6 +3,7 @@ import './App.css';
 
 //Importando componentes
 import CompShowBlogs from './blog/ShowBlogs';
+import CompCreateBlog from './blog/CreateBlog';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -10,12 +11,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <BrowserRouter>
+      </header>
+
+      <BrowserRouter>
           <Routes>
             <Route path='/' element={<CompShowBlogs/>}></Route>
+            <Route path='/create' element={<CompCreateBlog/>}></Route>
           </Routes>
         </BrowserRouter>
-      </header>
+
+
     </div>
   );
 }
